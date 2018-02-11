@@ -55,14 +55,36 @@ const dummyData = {
 }
 
 export default class Student extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showRepo: false,
+      repo: {}
+    }
+    this.setRepo = this.setRepo.bind(this);
+    this.showAll = this.showAll.bind(this);
+  }
+  setRepo(repo) {
+    this.setState({showRepo: true, repo});
+  }
+  showAll() {
+    this.setState({showRepo: false});
+  }
   render() {
     return(
       <div className="student-page">
-        <SideBar data={dummyData}/>
+        <SideBar
+          data={dummyData}
+          setRepo={this.setRepo}
+          user={this.props.user}
+        />
         <div>
-        <Main data={dummyData}/>
-        {false ? <Repo hi="hi" data={dummyData.testResults[0]}/> : <Repos data={dummyData}/>}
-              </div>
+          <Main data={dummyData}/>
+          {this.state.showRepo ? 
+            <Repo hi="hi" data={this.state.repo} showAll={this.showAll}/> : 
+            <Repos data={dummyData} setRepo={this.setRepo}/>
+          }
+        </div>
       </div>
     )
   }

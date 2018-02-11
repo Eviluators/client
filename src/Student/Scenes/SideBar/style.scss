@@ -45,11 +45,16 @@ $sidebar-width: 300px;
 .sidebar-repo-test-name {
   color: $primary-color !important;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .sidebar-expansion-title {
   margin: 0 !important;
   min-height: 40px !important;
+}
+
+.sidebar-repo-list {
+  list-style: none;
 }
 
 .MuiExpansionPanelSummary-content-43 {

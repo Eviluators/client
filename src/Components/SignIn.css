@@ -21,6 +21,9 @@
   border: none;
 }
 
+.gh-btn:focus {outline:none;} 
+.gh-btn::-moz-focus-inner {border:0;}
+
 .gh-logo {
   max-height: 30vh;
 }

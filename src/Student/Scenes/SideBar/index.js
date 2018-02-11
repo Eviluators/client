@@ -22,16 +22,20 @@ class SideBar extends React.Component {
     return (
       <div className="sidebar-container">
         <div className="sidebar-top-container" >
-        <Avatar className="sidebar-avatar" src={this.props.data.img} alt={this.props.data.name}/>
-        <h1 className="sidebar-name">{this.props.data.name}</h1>
+        <Avatar className="sidebar-avatar" src={this.props.user.photos[0].value} alt={this.props.data.name}/>
+        <h1 className="sidebar-name">{this.props.user.username}</h1>
         </div>
         <ExpansionPanel className="expansion-panel">
         <ExpansionPanelSummary className="sidebar-expansion-title" expandIcon={<ExpandMoreIcon />}>
           <h1 className="sidebar-expansion-name sidebar-name">Repositories</h1>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <ul>
-          {this.props.data.testResults.map(test =><li><h2 className="sidebar-repo-test-name">{test.RepoName}</h2></li>)}
+          <ul className="sidebar-repo-list">
+          {this.props.data.testResults.map(test =>
+            <li onClick={() => this.props.setRepo(test)}>
+              <h2 className="sidebar-repo-test-name">{test.RepoName}</h2>
+            </li>
+          )}
           </ul>
         </ExpansionPanelDetails>
       </ExpansionPanel>

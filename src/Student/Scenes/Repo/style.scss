@@ -38,3 +38,10 @@ $tertiary-color: green;
   -webkit-filter: url("#filter");
   filter: url("/#filter");
 }
+.back-btn {
+  position: absolute;
+  height: 40px;
+  top: 40px;
+  left: 340px;
+  cursor: pointer;
+}

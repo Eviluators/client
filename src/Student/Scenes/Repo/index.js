@@ -1,4 +1,5 @@
 import React from 'react';
+import back from './back.png';
 import './style.scss';
 
 
@@ -66,6 +67,7 @@ export default class Repo extends React.Component {
             )
           } 
         </div>
+        <img className="back-btn" onClick={this.props.showAll} src={back} alt="back" />
       </div>
     );
   }

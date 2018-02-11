@@ -7,6 +7,6 @@ import './App.css';
 
 export default () => (
   <div className="App">
-    <Route exact path="/" component={RequireAuth(SignIn, Student)} />
+    <Route exact path="/" component={RequireAuth(Student, SignIn)} />
   </div>
 );
