@@ -1,0 +1,62 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #cecece;
+$secondary-color: #3b3d4a;
+// $tertiary-color: #5c5edc;
+$tertiary-color: green;
+$secondary-background-color: #1c1d22;;
+$sidebar-width: 300px;
+
+.sidebar-name {
+  font-size: 1em;
+  color: $primary-color;
+}
+.sidebar-container {
+  background-color: $secondary-background-color;
+  width: $sidebar-width;
+  height: 100vh;
+  // border-right: inset 1px $primary-color;
+  position: fixed;
+}
+
+.sidebar-top-container {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar-avatar {
+  margin: 0 auto;
+  border: inset 1px $tertiary-color;
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.expansion-panel {
+  background-color: $secondary-background-color !important;
+  margin: 0 !important;
+}
+.sidebar-expansion-name {
+  background-color: $secondary-background-color !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+.sidebar-repo-test-name {
+  color: $primary-color !important;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.sidebar-expansion-title {
+  margin: 0 !important;
+  min-height: 40px !important;
+}
+
+.sidebar-repo-list {
+  list-style: none;
+}
+
+.MuiExpansionPanelSummary-content-43 {
+  margin: 20px auto !important;
+}

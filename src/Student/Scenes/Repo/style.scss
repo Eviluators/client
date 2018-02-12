@@ -1,0 +1,47 @@
+$sidebar-width: 300px;
+$primary-color: #cecece;
+$secondary-color: #3b3d4a;
+// $tertiary-color: #5c5edc;
+$tertiary-color: green;
+
+.repo-data-container {
+  width: 100vw;
+  height: 55vh;
+  padding-left: $sidebar-width;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+.repo-data {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: center;
+  width: 50vw;
+}
+.repo-data-title {
+  color: $tertiary-color;
+}
+.repo-data-list-item {
+  text-align: left;
+  color: $primary-color;
+}
+.repo-data-text {
+  color: $primary-color;
+  font-size: 1.8vw;
+  text-align: center;
+}
+
+.button {
+  transition: background-color 0.1s ease-out;
+  -webkit-filter: url("#filter");
+  filter: url("/#filter");
+}
+.back-btn {
+  position: absolute;
+  height: 40px;
+  top: 40px;
+  left: 340px;
+  cursor: pointer;
+}
