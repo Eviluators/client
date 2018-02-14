@@ -6,18 +6,20 @@ import './SignIn.css';
 
 
 export default class SignIn extends Component {
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+    this.props.showPage();
   }
   render() {
     return (
 		<div>
 			<div className="content content--fixed sign-in-div">
 			</div>
-			<div className="content">
-                  
+			<div className="content">     
 				<div className="glitch">
-          <video autoPlay  loop className="video glitch__img">
+          <video
+            autoPlay
+            className="video glitch__img__vid"
+          >
             <source src={Villian} type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
           </video>
           <div className="filter"></div>

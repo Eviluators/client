@@ -9,7 +9,6 @@ export default class Repos extends React.Component {
   }
   clickHandler(e, test) {
     this.props.setRepo(test);
-    console.log(test);
   }
   render() {
     return (

@@ -64,6 +64,9 @@ export default class Student extends React.Component {
     this.setRepo = this.setRepo.bind(this);
     this.showAll = this.showAll.bind(this);
   }
+  componentDidMount() {
+    this.props.showPage();
+  }
   setRepo(repo) {
     this.setState({showRepo: true, repo});
   }
