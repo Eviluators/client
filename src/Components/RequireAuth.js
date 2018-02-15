@@ -7,17 +7,23 @@ export default (AuthComponent, UnAuthComponent) => {
       super(props);
       this.state = {
         auth: false,
-        user: {},
-      }
+        user: {}
+      };
     }
     async componentDidMount() {
-      const res = await axios.get('https://eviluator-auth.herokuapp.com/account', {withCredentials: true});
-      if (res.data.user) this.setState({user: res.data.user, auth: true});
-
+      const res = await axios.get(
+        'https://eviluators-oauth-server.herokuapp.com/account',
+        { withCredentials: true }
+      );
+      if (res.data.user) this.setState({ user: res.data.user, auth: true });
     }
     render() {
-      return this.state.auth ? <AuthComponent user={this.state.user}/> : <UnAuthComponent />;
+      return this.state.auth ? (
+        <AuthComponent user={this.state.user} />
+      ) : (
+        <UnAuthComponent />
+      );
     }
   }
   return RequireAuth;
-}
+};
