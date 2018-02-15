@@ -46,7 +46,7 @@ export default class Repo extends React.Component {
             <RepoPassFailSection data={this.state.failing} title="Failed"/>
             <RepoPassFailSection data={this.state.passing} title="Passed"/>
           </React.Fragment> :
-          <h1 classname="congrats-heading">You're Killing It!</h1>
+          <h1 className="congrats-heading">You're Killing It!</h1>
         }
         <div className="back-div" onClick={this.props.showAll}>
           <img className="back-btn" src={back} alt="back" />
