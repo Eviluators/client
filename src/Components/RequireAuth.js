@@ -17,7 +17,6 @@ export default (AuthComponent, UnAuthComponent) => {
     async componentDidMount() {
       const res = await axios.get('https://eviluator-auth.herokuapp.com/account', {withCredentials: true});
       if (res.data.user) this.setState({user: res.data.user, auth: true});
-      console.log(res.data.user);
       this.setState({authCheck: true});
     }
     showPage() {

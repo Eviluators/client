@@ -9,6 +9,8 @@ const styles = theme => ({
     position: 'fixed',
     top: '50%',
     left: '50%',
+    marginRight: 50,
+    marginBottom: 50,
     color: 'green',
   },
 });
