@@ -27,7 +27,7 @@ export default class SignIn extends Component {
             <img className="logo" src={eviluators} alt="eviluators logo" />
           </div>
           <div className="gh-div content__text">
-            <a href="https://eviluator-auth.herokuapp.com/auth/github">
+            <a href="https://eviluators-oauth-server.herokuapp.com/auth/github">
               <button className="gh-btn">
                 <img src={GitHubLogo} className="gh-logo" alt="Github Logo" />
               </button>
