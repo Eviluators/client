@@ -5,8 +5,8 @@ import Villian from './scary_moon.mp4';
 import './SignIn.css';
 
 export default class SignIn extends Component {
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+    this.props.showPage();
   }
   render() {
     return (
@@ -14,7 +14,7 @@ export default class SignIn extends Component {
         <div className="content content--fixed sign-in-div" />
         <div className="content">
           <div className="glitch">
-            <video autoPlay loop className="video glitch__img">
+            <video autoPlay className="video glitch__img__vid">
               <source src={Villian} type="video/mp4" />Your browser does not
               support the video tag. I suggest you upgrade your browser.
             </video>
@@ -27,7 +27,7 @@ export default class SignIn extends Component {
             <img className="logo" src={eviluators} alt="eviluators logo" />
           </div>
           <div className="gh-div content__text">
-            <a href="https://eviluators-oauth-server.herokuapp.com/auth/github">
+            <a href="https://eviluator-auth.herokuapp.com/auth/github">
               <button className="gh-btn">
                 <img src={GitHubLogo} className="gh-logo" alt="Github Logo" />
               </button>
