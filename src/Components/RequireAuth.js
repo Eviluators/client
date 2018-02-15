@@ -17,7 +17,7 @@ export default (AuthComponent, UnAuthComponent) => {
     async componentDidMount() {
       const res = await axios.get(
         'https://eviluators-oauth-server.herokuapp.com/account',
-        { withCredentials: true }
+        { withCredentials: true, crossDomain: true }
       );
       if (res.data.user) this.setState({ user: res.data.user, auth: true });
       console.log(res.data.user);
