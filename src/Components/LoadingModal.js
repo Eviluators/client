@@ -6,12 +6,10 @@ import './LoadingModal.css';
 
 const styles = theme => ({
   progress: {
-    position: 'fixed',
-    top: '50%',
-    left: '50%',
-    color: 'green'
-  }
+    color: 'green',
+  },
 });
+
 
 class LoadingModal extends React.Component {
   render() {

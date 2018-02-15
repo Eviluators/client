@@ -20,7 +20,6 @@ export default (AuthComponent, UnAuthComponent) => {
         { withCredentials: true, crossDomain: true }
       );
       if (res.data.user) this.setState({ user: res.data.user, auth: true });
-      console.log(res.data.user);
       this.setState({ authCheck: true });
     }
     showPage() {
