@@ -11,7 +11,7 @@ export default class Student extends React.Component {
     this.state = {
       showRepo: false,
       repo: {}
-    }
+    };
     this.setRepo = this.setRepo.bind(this);
     this.showAll = this.showAll.bind(this);
     this.passing = this.props.user["Test Results"].filter(test => 
@@ -28,10 +28,10 @@ export default class Student extends React.Component {
     this.setState(() => ({showRepo: true, repo}));
   }
   showAll() {
-    this.setState({showRepo: false});
+    this.setState({ showRepo: false });
   }
   render() {
-    return(
+    return (
       <div className="student-page">
         <SideBar
           data={this.props.user}
@@ -49,6 +49,6 @@ export default class Student extends React.Component {
           }
         </div>
       </div>
-    )
+    );
   }
 }

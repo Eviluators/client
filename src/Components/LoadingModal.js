@@ -6,11 +6,6 @@ import './LoadingModal.css';
 
 const styles = theme => ({
   progress: {
-    position: 'fixed',
-    top: '50%',
-    left: '50%',
-    marginRight: 50,
-    marginBottom: 50,
     color: 'green',
   },
 });
@@ -20,10 +15,14 @@ class LoadingModal extends React.Component {
   render() {
     return ReactDOM.createPortal(
       <div className="loading-modal">
-        <CircularProgress className={this.props.classes.progress} size={50} color='green'/>
+        <CircularProgress
+          className={this.props.classes.progress}
+          size={50}
+          color="green"
+        />
       </div>,
       document.getElementById('loading-modal')
-    )
+    );
   }
 }
 
